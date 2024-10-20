@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import os
-from dotenv import load_dotenv
 from pandasai import Agent
 import matplotlib.pyplot as plt
 import requests
@@ -19,11 +18,9 @@ def check_connectivity():
         return True
     except requests.ConnectionError:
         return False
-# Load environment variables
-load_dotenv()
 
-# Set the PANDASAI_API_KEY environment variable
-os.environ['PANDASAI_API_KEY'] = '$2a$10$pTODw4eDi3lLS7hAj79hjutd5ekmCrlRel1TuZzFf2o7ULlLPN0gG'
+# Set the PANDASAI_API_KEY environment variable directly in the code
+os.environ['PANDASAI_API_KEY'] = '$2a$10$pTODw4eDi3lLS7hAj79hjutd5ekmCrlRel1TuZzFf2o7ULlLPN0g'
 
 # Function for pandas ai to query a DataFrame
 def chat_with_csv(df, prompt):
