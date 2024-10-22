@@ -2,9 +2,9 @@ streamlit==1.39.0
 pandas==1.5.3
 pandasai==0.6.0
 matplotlib==3.8.0
-requests==2.31.0
 deep-translator
 gTTS==2.3.2
+requests==2.31.0
 mysql-connector-python==8.1.0
-beautifulsoup4==4.12.2
-PyYAML==6.0
+pyyaml  # Remove version restriction for `pyyaml`
+cython  # Include Cython to fix build issues
