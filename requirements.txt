@@ -3,7 +3,7 @@ pandas==1.5.3
 pandasai==0.6.0
 matplotlib==3.8.0
 requests==2.31.0
-translatepy==2.3  # Changed from translate to translatepy
+translatepy==1.4.4  # Ensure correct version of translatepy
 gTTS==2.3.2
 mysql-connector-python==8.1.0
 beautifulsoup4==4.12.2
