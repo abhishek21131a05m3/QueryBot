@@ -1,11 +1,10 @@
 streamlit==1.39.0
 pandas==1.5.3
-pandasai
+pandasai==0.6.0  # Specify version if needed
 matplotlib==3.8.0
 requests==2.31.0
-translate==3.6.1  # Updated package for translation
+translate==3.6.1  # Corrected package for translation
 gTTS==2.3.2
 mysql-connector-python==8.1.0
-beautifulsoup4
-PyYAML
-
+beautifulsoup4==4.12.2  # Specify version for BeautifulSoup
+PyYAML==6.0
