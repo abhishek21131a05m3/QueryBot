@@ -3,7 +3,7 @@ pandas==1.5.3
 pandasai==0.6.0
 matplotlib==3.8.0
 requests==2.31.0
-deep-translator==1.8.5  # Replaced translatepy with deep-translator
+deep-translator==1.8.1 # Replaced translatepy with deep-translator
 gTTS==2.3.2
 mysql-connector-python==8.1.0
 beautifulsoup4==4.12.2
