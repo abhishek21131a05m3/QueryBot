@@ -4,7 +4,7 @@ import os
 from pandasai import Agent
 import matplotlib.pyplot as plt
 import requests
-from translatepy import Translator
+from deep_translator import GoogleTranslator
 from gtts import gTTS
 import mysql.connector
 from mysql.connector import Error
@@ -33,9 +33,9 @@ def chat_with_csv(df, prompt):
 
 # Function to translate text to the specified language
 def translate_text(text, target_language):
-    translator = Translator()
-    translated_text = translator.translate(text, target_language)
-    return translated_text.result
+    translator = GoogleTranslator(source='auto', target=target_language)
+    translated_text = translator.translate(text)
+    return translated_text
 
 # Function to generate speech from text using gTTS
 def generate_speech(text, lang):
@@ -59,7 +59,7 @@ def fetch_data_from_mysql(host, database, user, password, query):
     except Error as e:
         return f"Error while connecting to MySQL: {e}"
     finally:
-        if (connection.is_connected()):
+        if connection.is_connected():
             connection.close()
 
 # Initialize session state for chat history if it doesn't exist
